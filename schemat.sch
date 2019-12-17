@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="25" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -20887,6 +20887,17 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="154.94" y1="205.74" x2="167.64" y2="205.74" width="0.1524" layer="91"/>
 <label x="160.02" y="203.2" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="C11" gate="G$1" pin="2"/>
+<wire x1="172.72" y1="165.1" x2="172.72" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="160.02" x2="162.56" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="S1" gate="G$1" pin="2"/>
+<wire x1="162.56" y1="160.02" x2="162.56" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="X_17" gate="G$1" pin="0"/>
+<wire x1="157.48" y1="160.02" x2="162.56" y2="160.02" width="0.1524" layer="91"/>
+<label x="157.48" y="157.48" size="1.778" layer="95"/>
+<junction x="162.56" y="160.02"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -21038,18 +21049,6 @@ Source: 008-0260-0_E.pdf</description>
 <junction x="162.56" y="172.72"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="172.72" y1="165.1" x2="172.72" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="160.02" x2="162.56" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="S1" gate="G$1" pin="2"/>
-<wire x1="162.56" y1="160.02" x2="162.56" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="X_17" gate="G$1" pin="0"/>
-<wire x1="157.48" y1="160.02" x2="162.56" y2="160.02" width="0.1524" layer="91"/>
-<label x="157.48" y="157.48" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$4" class="0">
 <segment>
 <wire x1="149.86" y1="180.34" x2="182.88" y2="180.34" width="0.1524" layer="91"/>
@@ -21194,17 +21193,17 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="160.02" y1="208.28" x2="167.64" y2="208.28" width="0.1524" layer="91"/>
 <label x="149.86" y="213.36" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP7" gate="A" pin="2"/>
+<wire x1="48.26" y1="152.4" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
+<label x="30.48" y="152.4" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="UART_TX" class="0">
 <segment>
 <pinref part="JP3" gate="A" pin="1"/>
 <wire x1="48.26" y1="238.76" x2="30.48" y2="238.76" width="0.1524" layer="91"/>
 <label x="33.02" y="238.76" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="JP11" gate="A" pin="1"/>
-<wire x1="101.6" y1="175.26" x2="88.9" y2="175.26" width="0.1524" layer="91"/>
-<label x="83.82" y="175.26" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="PORTA_L" pin="PA2"/>
@@ -21219,11 +21218,6 @@ Source: 008-0260-0_E.pdf</description>
 <label x="33.02" y="236.22" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP11" gate="A" pin="2"/>
-<wire x1="101.6" y1="172.72" x2="88.9" y2="172.72" width="0.1524" layer="91"/>
-<label x="83.82" y="172.72" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="PORTA_L" pin="PA3"/>
 <wire x1="-12.7" y1="83.82" x2="-17.78" y2="83.82" width="0.1524" layer="91"/>
 <label x="-25.4" y="83.82" size="1.778" layer="95"/>
@@ -21234,6 +21228,11 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="JP4" gate="A" pin="1"/>
 <wire x1="48.26" y1="215.9" x2="33.02" y2="215.9" width="0.1524" layer="91"/>
 <label x="35.56" y="215.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTA_H" pin="PA13"/>
+<wire x1="-12.7" y1="53.34" x2="-17.78" y2="53.34" width="0.1524" layer="91"/>
+<label x="-22.86" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SWCLK" class="0">
@@ -21246,13 +21245,6 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="IC1" gate="PORTA_H" pin="PA14"/>
 <wire x1="-12.7" y1="50.8" x2="-17.78" y2="50.8" width="0.1524" layer="91"/>
 <label x="-22.86" y="50.8" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SERWO_PWM_OUTPUT4" class="0">
-<segment>
-<pinref part="JP5" gate="A" pin="1"/>
-<wire x1="48.26" y1="195.58" x2="35.56" y2="195.58" width="0.1524" layer="91"/>
-<label x="15.24" y="195.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SERWO_PWM_OUTPUT_3" class="0">
@@ -21277,13 +21269,6 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="IC1" gate="PORTA_H" pin="PA10"/>
 <wire x1="-12.7" y1="60.96" x2="-17.78" y2="60.96" width="0.1524" layer="91"/>
 <label x="-45.72" y="60.96" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="+5_SERWO" class="0">
-<segment>
-<pinref part="JP7" gate="A" pin="2"/>
-<wire x1="48.26" y1="152.4" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
-<label x="30.48" y="152.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SERWO_PWM_OUTPUT_1" class="0">
@@ -21464,12 +21449,10 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="-12.7" y1="66.04" x2="-17.78" y2="66.04" width="0.1524" layer="91"/>
 <label x="-45.72" y="66.04" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="SWIDO" class="0">
 <segment>
-<pinref part="IC1" gate="PORTA_H" pin="PA13"/>
-<wire x1="-12.7" y1="53.34" x2="-17.78" y2="53.34" width="0.1524" layer="91"/>
-<label x="-22.86" y="53.34" size="1.778" layer="95"/>
+<pinref part="JP5" gate="A" pin="1"/>
+<wire x1="48.26" y1="195.58" x2="35.56" y2="195.58" width="0.1524" layer="91"/>
+<label x="15.24" y="195.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RPI_SIGNAL_4" class="0">
@@ -21526,6 +21509,11 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="22.86" y1="73.66" x2="27.94" y2="73.66" width="0.1524" layer="91"/>
 <label x="25.4" y="73.66" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="GPIO22"/>
+<wire x1="91.44" y1="50.8" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
+<label x="68.58" y="50.8" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="STM32_SIGNAL_2" class="0">
 <segment>
@@ -21550,11 +21538,6 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="91.44" y1="58.42" x2="86.36" y2="58.42" width="0.1524" layer="91"/>
 <label x="68.58" y="58.42" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="X1" gate="G$1" pin="GPIO22"/>
-<wire x1="91.44" y1="50.8" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
-<label x="68.58" y="50.8" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="UART_TXD" class="0">
 <segment>
@@ -21562,12 +21545,22 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="121.92" y1="43.18" x2="127" y2="43.18" width="0.1524" layer="91"/>
 <label x="124.46" y="43.18" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP11" gate="A" pin="1"/>
+<wire x1="101.6" y1="175.26" x2="88.9" y2="175.26" width="0.1524" layer="91"/>
+<label x="83.82" y="175.26" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="UART_RXD" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="RXD"/>
 <wire x1="121.92" y1="40.64" x2="127" y2="40.64" width="0.1524" layer="91"/>
 <label x="124.46" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP11" gate="A" pin="2"/>
+<wire x1="101.6" y1="172.72" x2="88.9" y2="172.72" width="0.1524" layer="91"/>
+<label x="83.82" y="172.72" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
