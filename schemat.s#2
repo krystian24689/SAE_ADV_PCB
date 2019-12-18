@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -20896,6 +20896,7 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="X_17" gate="G$1" pin="0"/>
 <wire x1="157.48" y1="160.02" x2="162.56" y2="160.02" width="0.1524" layer="91"/>
 <label x="157.48" y="157.48" size="1.778" layer="95"/>
+<junction x="162.56" y="160.02"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -21192,6 +21193,11 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="160.02" y1="208.28" x2="167.64" y2="208.28" width="0.1524" layer="91"/>
 <label x="149.86" y="213.36" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP7" gate="A" pin="2"/>
+<wire x1="48.26" y1="152.4" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
+<label x="30.48" y="152.4" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="UART_TX" class="0">
 <segment>
@@ -21263,13 +21269,6 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="IC1" gate="PORTA_H" pin="PA10"/>
 <wire x1="-12.7" y1="60.96" x2="-17.78" y2="60.96" width="0.1524" layer="91"/>
 <label x="-45.72" y="60.96" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="+5_SERWO" class="0">
-<segment>
-<pinref part="JP7" gate="A" pin="2"/>
-<wire x1="48.26" y1="152.4" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
-<label x="30.48" y="152.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SERWO_PWM_OUTPUT_1" class="0">
@@ -21354,6 +21353,11 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="IC1" gate="PORTA_H" pin="PA15"/>
 <wire x1="-12.7" y1="48.26" x2="-17.78" y2="48.26" width="0.1524" layer="91"/>
 <label x="-33.02" y="48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTA_L" pin="PA0"/>
+<wire x1="-12.7" y1="91.44" x2="-17.78" y2="91.44" width="0.1524" layer="91"/>
+<label x="-30.48" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$9" class="0">

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="25" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -20887,6 +20887,16 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="154.94" y1="205.74" x2="167.64" y2="205.74" width="0.1524" layer="91"/>
 <label x="160.02" y="203.2" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="C11" gate="G$1" pin="2"/>
+<wire x1="172.72" y1="165.1" x2="172.72" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="160.02" x2="162.56" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="S1" gate="G$1" pin="2"/>
+<wire x1="162.56" y1="160.02" x2="162.56" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="X_17" gate="G$1" pin="0"/>
+<wire x1="157.48" y1="160.02" x2="162.56" y2="160.02" width="0.1524" layer="91"/>
+<label x="157.48" y="157.48" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -21036,18 +21046,6 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="C11" gate="G$1" pin="1"/>
 <wire x1="162.56" y1="172.72" x2="172.72" y2="172.72" width="0.1524" layer="91"/>
 <junction x="162.56" y="172.72"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="172.72" y1="165.1" x2="172.72" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="160.02" x2="162.56" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="S1" gate="G$1" pin="2"/>
-<wire x1="162.56" y1="160.02" x2="162.56" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="X_17" gate="G$1" pin="0"/>
-<wire x1="157.48" y1="160.02" x2="162.56" y2="160.02" width="0.1524" layer="91"/>
-<label x="157.48" y="157.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -21234,6 +21232,11 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="JP4" gate="A" pin="1"/>
 <wire x1="48.26" y1="215.9" x2="33.02" y2="215.9" width="0.1524" layer="91"/>
 <label x="35.56" y="215.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTA_H" pin="PA13"/>
+<wire x1="-12.7" y1="53.34" x2="-17.78" y2="53.34" width="0.1524" layer="91"/>
+<label x="-22.86" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SWCLK" class="0">
@@ -21465,13 +21468,6 @@ Source: 008-0260-0_E.pdf</description>
 <label x="-45.72" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SWIDO" class="0">
-<segment>
-<pinref part="IC1" gate="PORTA_H" pin="PA13"/>
-<wire x1="-12.7" y1="53.34" x2="-17.78" y2="53.34" width="0.1524" layer="91"/>
-<label x="-22.86" y="53.34" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="RPI_SIGNAL_4" class="0">
 <segment>
 <pinref part="IC1" gate="PORTB_L" pin="PB3"/>
@@ -21536,7 +21532,7 @@ Source: 008-0260-0_E.pdf</description>
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO27"/>
 <wire x1="91.44" y1="53.34" x2="86.36" y2="53.34" width="0.1524" layer="91"/>
-<label x="71.12" y="53.34" size="1.778" layer="95"/>
+<label x="68.58" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="STM32_SIGNAL_1" class="0">
@@ -21548,12 +21544,12 @@ Source: 008-0260-0_E.pdf</description>
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO17"/>
 <wire x1="91.44" y1="58.42" x2="86.36" y2="58.42" width="0.1524" layer="91"/>
-<label x="71.12" y="58.42" size="1.778" layer="95"/>
+<label x="68.58" y="58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO22"/>
 <wire x1="91.44" y1="50.8" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
-<label x="71.12" y="50.8" size="1.778" layer="95"/>
+<label x="68.58" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="UART_TXD" class="0">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -20896,6 +20896,7 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="X_17" gate="G$1" pin="0"/>
 <wire x1="157.48" y1="160.02" x2="162.56" y2="160.02" width="0.1524" layer="91"/>
 <label x="157.48" y="157.48" size="1.778" layer="95"/>
+<junction x="162.56" y="160.02"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -21308,26 +21309,26 @@ Source: 008-0260-0_E.pdf</description>
 </net>
 <net name="PWM_INPUT_1" class="0">
 <segment>
-<pinref part="JP12" gate="A" pin="1"/>
-<wire x1="101.6" y1="154.94" x2="83.82" y2="154.94" width="0.1524" layer="91"/>
-<label x="78.74" y="154.94" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="PORTB_L" pin="PB0"/>
 <wire x1="22.86" y1="91.44" x2="27.94" y2="91.44" width="0.1524" layer="91"/>
 <label x="25.4" y="91.44" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="PWM_INPUT_2" class="0">
 <segment>
 <pinref part="JP12" gate="A" pin="2"/>
 <wire x1="101.6" y1="152.4" x2="83.82" y2="152.4" width="0.1524" layer="91"/>
 <label x="78.74" y="152.4" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="PWM_INPUT_2" class="0">
 <segment>
 <pinref part="IC1" gate="PORTA_L" pin="PA6"/>
 <wire x1="-12.7" y1="76.2" x2="-17.78" y2="76.2" width="0.1524" layer="91"/>
 <label x="-30.48" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP12" gate="A" pin="1"/>
+<wire x1="101.6" y1="154.94" x2="83.82" y2="154.94" width="0.1524" layer="91"/>
+<label x="78.74" y="154.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM_INPUT_3" class="0">
@@ -21352,6 +21353,11 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="IC1" gate="PORTA_H" pin="PA15"/>
 <wire x1="-12.7" y1="48.26" x2="-17.78" y2="48.26" width="0.1524" layer="91"/>
 <label x="-33.02" y="48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTA_L" pin="PA0"/>
+<wire x1="-12.7" y1="91.44" x2="-17.78" y2="91.44" width="0.1524" layer="91"/>
+<label x="-30.48" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -21456,50 +21462,50 @@ Source: 008-0260-0_E.pdf</description>
 </net>
 <net name="RPI_SIGNAL_4" class="0">
 <segment>
-<pinref part="IC1" gate="PORTB_L" pin="PB3"/>
-<wire x1="22.86" y1="83.82" x2="27.94" y2="83.82" width="0.1524" layer="91"/>
-<label x="25.4" y="83.82" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="X1" gate="G$1" pin="GPIO20"/>
 <wire x1="91.44" y1="17.78" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
 <label x="68.58" y="17.78" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="RPI_SIGNAL_3" class="0">
 <segment>
 <pinref part="IC1" gate="PORTB_L" pin="PB4"/>
 <wire x1="22.86" y1="81.28" x2="27.94" y2="81.28" width="0.1524" layer="91"/>
 <label x="25.4" y="81.28" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="RPI_SIGNAL_3" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO16"/>
 <wire x1="91.44" y1="22.86" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
 <label x="68.58" y="22.86" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="RPI_SIGNAL_2" class="0">
-<segment>
-<pinref part="IC1" gate="PORTB_L" pin="PB5"/>
-<wire x1="22.86" y1="78.74" x2="27.94" y2="78.74" width="0.1524" layer="91"/>
-<label x="25.4" y="78.74" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X1" gate="G$1" pin="GPIO26"/>
-<wire x1="91.44" y1="20.32" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
-<label x="68.58" y="20.32" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="RPI_SIGNAL_1" class="0">
 <segment>
 <pinref part="IC1" gate="PORTB_L" pin="PB6"/>
 <wire x1="22.86" y1="76.2" x2="27.94" y2="76.2" width="0.1524" layer="91"/>
 <label x="25.4" y="76.2" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="RPI_SIGNAL_2" class="0">
+<segment>
+<pinref part="X1" gate="G$1" pin="GPIO26"/>
+<wire x1="91.44" y1="20.32" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
+<label x="68.58" y="20.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTB_L" pin="PB3"/>
+<wire x1="22.86" y1="83.82" x2="27.94" y2="83.82" width="0.1524" layer="91"/>
+<label x="25.4" y="83.82" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RPI_SIGNAL_1" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="GPIO19"/>
 <wire x1="91.44" y1="25.4" x2="86.36" y2="25.4" width="0.1524" layer="91"/>
 <label x="68.58" y="25.4" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTB_L" pin="PB5"/>
+<wire x1="22.86" y1="78.74" x2="27.94" y2="78.74" width="0.1524" layer="91"/>
+<label x="25.4" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="STM32_SIGNAL_3" class="0">
